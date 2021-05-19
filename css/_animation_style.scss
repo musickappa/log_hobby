@@ -1,0 +1,19 @@
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $delay: 0s,
+  $iteration-count: infinite,
+  $time-function: ease,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    iteration-count: $iteration-count;
+    time-function: $time-function;
+    delay: $delay;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}

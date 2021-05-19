@@ -1,0 +1,134 @@
+a.transition {
+  display: inline-block;
+  margin: 20px 0 30px;
+  padding: 7px 10px;
+  border: 1px solid #05a;
+  color: #05a;
+  text-decoration: none;
+}
+header.sample01,
+header.sample02 {
+  transition: 0.2s;
+}
+a.transition:hover {
+  background: #05a;
+  color: #fff;
+}
+
+.sample01,
+.sample02 {
+  //   margin-bottom: 13em;
+  position: relative;
+  width: 700px;
+  //   background-color: #444;
+  font-weight: 600;
+}
+
+.menu {
+  border: solid;
+  width: auto;
+  //   transition: 1s;
+  &:hover {
+    & header {
+      opacity: 0;
+    }
+    & header {
+      &:hover {
+        color: blue;
+        opacity: 1;
+      }
+    }
+  }
+}
+ul {
+  & .living {
+    & ul {
+      // transition: 1s;
+      & li {
+        //   transition: 1s;
+      }
+    }
+  }
+}
+ul {
+  //   transition: 5s;
+  & .living {
+    display: inline-block;
+    & a {
+      padding: 15px 30px;
+      display: block;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+    & span {
+      margin-left: 1.2em;
+    }
+    &:hover {
+      & ul {
+        margin-top: -50px;
+        & li {
+          height: auto; /*サブメニューの高さ*/
+          &:nth-child(1) {
+            margin-left: 10.6em;
+          }
+          opacity: 1;
+          overflow: visible;
+          //     transition: 0.4s;
+        }
+      }
+      & a {
+        background-color: #efefef;
+        color: #444;
+      }
+    }
+    & ul {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      // transition: 1s;
+      & li {
+        display: inline-block;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+        //   transition: 5s;
+
+        & a {
+          background-color: #efefef;
+          color: #444;
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+  }
+}
+
+.box {
+  background-color: #05a;
+  display: flex;
+  // justify-content: space-between; /* 必須ではない */
+  width: 80%;
+  margin: 100px 0 100px 0;
+}
+
+.box .item {
+  height: 30px;
+  border: solid;
+  width: 50%; /* 合計が100%を目安に調整 */
+  // padding-top: 20%; /* 必須ではない */
+  transition: width 0.1s ease-in-out; /* 必須ではない */
+}
+.box:hover .item {
+  // height: 1px;
+  width: 10%; /* ホバー要素以外の大きさを指定 */
+}
+.box .item:hover {
+  // height: 1px;
+  width: 90%; /* ホバー要素の大きさを指定 */
+}

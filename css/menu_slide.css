@@ -1,0 +1,133 @@
+@charset "UTF-8";
+a.transition {
+  display: inline-block;
+  margin: 20px 0 30px;
+  padding: 7px 10px;
+  border: 1px solid #05a;
+  color: #05a;
+  text-decoration: none;
+}
+
+header.sample01,
+header.sample02 {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+a.transition:hover {
+  background: #05a;
+  color: #fff;
+}
+
+.sample01,
+.sample02 {
+  position: relative;
+  width: 700px;
+  font-weight: 600;
+}
+
+.menu {
+  border: solid;
+  width: auto;
+}
+
+.menu:hover header {
+  opacity: 0;
+}
+
+.menu:hover header:hover {
+  color: blue;
+  opacity: 1;
+}
+
+ul .living {
+  display: inline-block;
+}
+
+ul .living a {
+  padding: 15px 30px;
+  display: block;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+ul .living span {
+  margin-left: 1.2em;
+}
+
+ul .living:hover ul {
+  margin-top: -50px;
+}
+
+ul .living:hover ul li {
+  height: auto;
+  /*サブメニューの高さ*/
+  opacity: 1;
+  overflow: visible;
+}
+
+ul .living:hover ul li:nth-child(1) {
+  margin-left: 10.6em;
+}
+
+ul .living:hover a {
+  background-color: #efefef;
+  color: #444;
+}
+
+ul .living ul {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+ul .living ul li {
+  display: inline-block;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+ul .living ul li:nth-child(1) {
+  margin-left: 0;
+}
+
+ul .living ul li a {
+  background-color: #efefef;
+  color: #444;
+}
+
+ul .living ul li a:hover {
+  background-color: #ddd;
+}
+
+.box {
+  background-color: #05a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 100px 0 100px 0;
+}
+
+.box .item {
+  height: 30px;
+  border: solid;
+  width: 50%;
+  /* 合計が100%を目安に調整 */
+  -webkit-transition: width 0.1s ease-in-out;
+  transition: width 0.1s ease-in-out;
+  /* 必須ではない */
+}
+
+.box:hover .item {
+  width: 10%;
+  /* ホバー要素以外の大きさを指定 */
+}
+
+.box .item:hover {
+  width: 90%;
+  /* ホバー要素の大きさを指定 */
+}
+/*# sourceMappingURL=menu_slide.css.map */
