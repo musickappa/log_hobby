@@ -149,7 +149,7 @@ html {
       position: relative;
       border-radius: 50%;
       border: solid 5px;
-      border-color: darkslategray;
+      border-color: rgb(154, 177, 221);
       width: 300px;
       height: 300px;
       z-index: 10;
@@ -169,7 +169,7 @@ html {
           height: 250px;
           top: 10%;
           left: -8%;
-          color: cornflowerblue;
+          color: rgb(154, 177, 221);
           background-color: white;
           z-index: 10;
           & p {
@@ -218,11 +218,12 @@ html {
     }
     & .camera {
       display: inline-block;
+      // text-align: center;
       // margin-right: 200px;
       position: relative;
       border-radius: 50%;
       border: solid 7px;
-      border-color: darkslategray;
+      border-color: rgb(154, 177, 221);
       width: 300px;
       height: 300px;
       z-index: 10;
@@ -243,7 +244,7 @@ html {
           height: 250px;
           top: 10%;
           left: -8%;
-          color: cornflowerblue;
+          color: rgb(154, 177, 221);
           background-color: white;
           z-index: 10;
           & p {
@@ -334,7 +335,7 @@ html {
         }
       }
       & .aqua__text {
-        border: solid;
+        // border: solid;
         height: 200px;
         width: auto;
       }

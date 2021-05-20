@@ -151,7 +151,7 @@ html {
   position: relative;
   border-radius: 50%;
   border: solid 5px;
-  border-color: darkslategray;
+  border-color: #9ab1dd;
   width: 300px;
   height: 300px;
   z-index: 10;
@@ -175,7 +175,7 @@ html {
   height: 250px;
   top: 10%;
   left: -8%;
-  color: cornflowerblue;
+  color: #9ab1dd;
   background-color: white;
   z-index: 10;
 }
@@ -223,7 +223,7 @@ html {
   position: relative;
   border-radius: 50%;
   border: solid 7px;
-  border-color: darkslategray;
+  border-color: #9ab1dd;
   width: 300px;
   height: 300px;
   z-index: 10;
@@ -248,7 +248,7 @@ html {
   height: 250px;
   top: 10%;
   left: -8%;
-  color: cornflowerblue;
+  color: #9ab1dd;
   background-color: white;
   z-index: 10;
 }
@@ -337,7 +337,6 @@ html {
 }
 
 .post__aquarium__content .aqua__text {
-  border: solid;
   height: 200px;
   width: auto;
 }

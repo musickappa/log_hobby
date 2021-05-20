@@ -1,3 +1,4 @@
+@import "_animation_style";
 a.transition {
   display: inline-block;
   margin: 20px 0 30px;
@@ -110,25 +111,150 @@ ul {
 }
 
 .box {
-  background-color: #05a;
+  // background-color: #05a;
   display: flex;
   // justify-content: space-between; /* 必須ではない */
-  width: 80%;
-  margin: 100px 0 100px 0;
+  width: 100%;
+  // margin: 100px 0 100px 0;
 }
 
-.box .item {
-  height: 30px;
-  border: solid;
-  width: 50%; /* 合計が100%を目安に調整 */
-  // padding-top: 20%; /* 必須ではない */
-  transition: width 0.1s ease-in-out; /* 必須ではない */
+.box {
+  transition: 1s;
+  color: darkslategray;
+  font-weight: 600;
+  & .item {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    // border: solid;
+    width: 100%; /* 合計が100%を目安に調整 */
+    // padding-top: 20%; /* 必須ではない */
+    transition: 1s ease-in-out; /* 必須ではない */
+  }
 }
-.box:hover .item {
-  // height: 1px;
-  width: 10%; /* ホバー要素以外の大きさを指定 */
+.item-container {
+  align-items: center;
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-left: 30px;
 }
-.box .item:hover {
-  // height: 1px;
-  width: 90%; /* ホバー要素の大きさを指定 */
+.item2 {
+  text-align: center;
+  border: 1px;
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 100;
+  &:nth-child(1) {
+    background-color: antiquewhite;
+    padding: 20px;
+    opacity: 1;
+  }
+  &:nth-child(2) {
+    margin-top: 25px;
+    opacity: 1;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin-left: 10px;
+    text-decoration: underline;
+  }
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border-radius: 25%;
+  background-color: white;
+  transition: 1s;
+
+  & .itemarrow {
+    &__icon {
+      // border-radius: 25%;
+      display: inline-block;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+.box:hover {
+  width: 100%;
+  // & .itemarrow__downarrow {
+  //   width: 0%;
+  // }
+  & .item {
+    width: 0%; /* ホバー要素以外の大きさを指定 */
+    & .item2 {
+      // visibility: hidden;
+      height: 0;
+      width: 0;
+      opacity: 0;
+      transition: 1s;
+    }
+  }
+}
+.box {
+  // & .itemarrow__downarrow {
+  //   width: 0%;
+  // }
+  text-align: center;
+  & .item:hover {
+    width: 100%; /* ホバー要素の大きさを指定 */
+
+    & .item2 {
+      &:nth-child(1) {
+        width: 50px;
+        border: rgba($color: #000000, $alpha: 0);
+        margin-right: 30px;
+      }
+      &:nth-child(2) {
+        width: 0px;
+        margin-left: 0px;
+        border: rgba($color: #000000, $alpha: 0);
+        // visibility: hidden;
+        color: rgba($color: #000000, $alpha: 0);
+      }
+      &:nth-child(3) {
+        // width: 0px;
+        margin-left: 0px;
+        // border: rgba($color: #000000, $alpha: 0);
+        // visibility: hidden;
+      }
+      border: solid 1px cadetblue;
+      height: 50px;
+      width: 75px;
+      opacity: 1;
+      padding: 20px;
+      margin-left: 30px;
+    }
+  }
+}
+
+.content__arrow {
+  position: absolute;
+  // display: inline-block;
+  left: 120px;
+  top: 270px;
+  // top: 20px;
+  width: 20%;
+  // color: #05a;
+  @include animation(
+    $name: ky-arrow-animation,
+    $iteration-count: infinite,
+    $duration: 2s
+  );
+}
+@keyframes ky-arrow-animation {
+  0%,
+  50%,
+  100% {
+    transform: translateY(-10%);
+  }
+
+  30% {
+    transform: none;
+  }
 }

@@ -103,31 +103,178 @@ ul .living ul li a:hover {
 }
 
 .box {
-  background-color: #05a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
-  margin: 100px 0 100px 0;
+  width: 100%;
+}
+
+.box {
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: darkslategray;
+  font-weight: 600;
 }
 
 .box .item {
-  height: 30px;
-  border: solid;
-  width: 50%;
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  width: 100%;
   /* 合計が100%を目安に調整 */
-  -webkit-transition: width 0.1s ease-in-out;
-  transition: width 0.1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
   /* 必須ではない */
 }
 
+.item-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.item2 {
+  text-align: center;
+  border: 1px;
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 100;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border-radius: 25%;
+  background-color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.item2:nth-child(1) {
+  background-color: antiquewhite;
+  padding: 20px;
+  opacity: 1;
+}
+
+.item2:nth-child(2) {
+  margin-top: 25px;
+  opacity: 1;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.item2 .itemarrow__icon {
+  display: inline-block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.box:hover {
+  width: 100%;
+}
+
 .box:hover .item {
-  width: 10%;
+  width: 0%;
   /* ホバー要素以外の大きさを指定 */
 }
 
+.box:hover .item .item2 {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.box {
+  text-align: center;
+}
+
 .box .item:hover {
-  width: 90%;
+  width: 100%;
   /* ホバー要素の大きさを指定 */
+}
+
+.box .item:hover .item2 {
+  border: solid 1px cadetblue;
+  height: 50px;
+  width: 75px;
+  opacity: 1;
+  padding: 20px;
+  margin-left: 30px;
+}
+
+.box .item:hover .item2:nth-child(1) {
+  width: 50px;
+  border: rgba(0, 0, 0, 0);
+  margin-right: 30px;
+}
+
+.box .item:hover .item2:nth-child(2) {
+  width: 0px;
+  margin-left: 0px;
+  border: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+}
+
+.box .item:hover .item2:nth-child(3) {
+  margin-left: 0px;
+}
+
+.content__arrow {
+  position: absolute;
+  left: 120px;
+  top: 270px;
+  width: 20%;
+  -webkit-animation-name: ky-arrow-animation;
+          animation-name: ky-arrow-animation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes ky-arrow-animation {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  30% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes ky-arrow-animation {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  30% {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 /*# sourceMappingURL=menu_slide.css.map */
