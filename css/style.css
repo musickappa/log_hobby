@@ -15,21 +15,115 @@ html {
   display: none;
 }
 
-.container {
+.global_container {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.global_container .nav-container-content {
   height: auto;
   width: auto;
   max-width: 100%;
 }
 
-.container nav {
+.global_container .nav-container-content nav {
   position: absolute;
-  opacity: 0;
+  display: inline-block;
+  height: 100%;
+  width: auto;
   top: 0;
   left: 0;
+  text-align: start;
 }
 
-.container::-webkit-scrollbar {
+.global_container .nav-container-content nav .option {
+  height: auto;
+  width: auto;
+}
+
+.global_container .nav-container-content nav .option__title {
+  position: relative;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 90px;
+  margin-left: 60px;
+  font-weight: 100px;
+}
+
+.global_container .nav-container-content nav .option__title .icon {
+  display: inline-block;
+}
+
+.global_container .nav-container-content nav .option__title p {
+  display: inline-block;
+}
+
+.global_container .nav-container-content::-webkit-scrollbar {
   display: none;
+}
+
+.global_container .nav-container-content__image {
+  background-image: url("../images/pic/mokuji.JPG");
+  position: absolute;
+  right: 0;
+  height: auto;
+  width: 700px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 4vh;
+}
+
+.global_container .nav-container-profile {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.global_container .nav-container-profile nav {
+  position: absolute;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  top: 0;
+  right: 0;
+  text-align: start;
+  border: solid;
+}
+
+.global_container .nav-container-profile nav .option {
+  height: 100px;
+  width: 100px;
+}
+
+.global_container .nav-container-profile nav .option__title {
+  height: auto;
+  width: auto;
+}
+
+.global_container .nav-container-profile::-webkit-scrollbar {
+  display: none;
+}
+
+.global_container .nav-container-profile__image {
+  background-image: url("../images/pic/mokuji.JPG");
+  position: absolute;
+  left: 0;
+  height: auto;
+  width: 700px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 4vh;
+}
+
+.container {
+  opacity: 0;
 }
 
 .title {
@@ -337,7 +431,7 @@ html {
 }
 
 .post__aquarium__content .aqua__text {
-  height: 200px;
+  height: 150px;
   width: auto;
 }
 

@@ -1,0 +1,626 @@
+body {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.water {
+  position: relative;
+  text-align: center;
+  top: 40px;
+  left: 46%;
+  height: 100px;
+  width: 100px;
+}
+
+.water .water-circle {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 25%;
+  width: 70px;
+  height: 5px;
+  border: #213458 solid 0.1px;
+  border-radius: 50%;
+  margin-right: 5px;
+  -webkit-animation-name: water-circle-animation;
+          animation-name: water-circle-animation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.water .water-arrow {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 55px;
+  width: 15px;
+  height: 15px;
+  background: #213458;
+  border-radius: 0% 100% 50% 50%/ 0% 50% 50% 100%;
+  -webkit-transform: rotate(45deg) skew(100deg, 10deg) scale(0.3);
+          transform: rotate(45deg) skew(100deg, 10deg) scale(0.3);
+  -webkit-animation-name: water-arrow-animation;
+          animation-name: water-arrow-animation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.water .water-point div {
+  position: absolute;
+  display: inline-block;
+  left: 65px;
+  width: 15px;
+  height: 15px;
+  background: rgba(33, 52, 88, 0.4);
+  border-radius: 0% 100% 50% 50%/ 0% 50% 50% 100%;
+}
+
+.water .water-point div:nth-child(1) {
+  -webkit-transform: translate(20px, 30px) rotate(45deg) skew(10deg, 10deg);
+          transform: translate(20px, 30px) rotate(45deg) skew(10deg, 10deg);
+  -webkit-animation-name: water-point1-animation;
+          animation-name: water-point1-animation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.water .water-point div:nth-child(2) {
+  background: aquamarine;
+  -webkit-transform: translate(100px, 20px) rotate(45deg) skew(10deg, 10deg);
+          transform: translate(100px, 20px) rotate(45deg) skew(10deg, 10deg);
+  -webkit-animation-name: water-point2-animation;
+          animation-name: water-point2-animation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes water-circle-animation {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes water-circle-animation {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes water-arrow-animation {
+  0% {
+    -webkit-transform: translateY(-20px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+            transform: translateY(-20px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  20% {
+    -webkit-transform: translateY(30px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+            transform: translateY(30px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(30px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+            transform: translateY(30px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes water-arrow-animation {
+  0% {
+    -webkit-transform: translateY(-20px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+            transform: translateY(-20px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  20% {
+    -webkit-transform: translateY(30px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+            transform: translateY(30px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(30px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+            transform: translateY(30px) rotate(45deg) skew(10deg, 10deg) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes water-point1-animation {
+  0%,
+  10%,
+  100% {
+    -webkit-transform: translate(-20px, 40px) rotate(165deg) skew(10deg, 10deg) scale(0.3);
+            transform: translate(-20px, 40px) rotate(165deg) skew(10deg, 10deg) scale(0.3);
+    opacity: 0;
+  }
+  11% {
+    -webkit-transform: translate(-20px, 40px) rotate(165deg) skew(10deg, 10deg) scale(0.3);
+            transform: translate(-20px, 40px) rotate(165deg) skew(10deg, 10deg) scale(0.3);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translate(-40px, 25px) rotate(120deg) skew(10deg, 10deg) scale(0.3);
+            transform: translate(-40px, 25px) rotate(120deg) skew(10deg, 10deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes water-point1-animation {
+  0%,
+  10%,
+  100% {
+    -webkit-transform: translate(-20px, 40px) rotate(165deg) skew(10deg, 10deg) scale(0.3);
+            transform: translate(-20px, 40px) rotate(165deg) skew(10deg, 10deg) scale(0.3);
+    opacity: 0;
+  }
+  11% {
+    -webkit-transform: translate(-20px, 40px) rotate(165deg) skew(10deg, 10deg) scale(0.3);
+            transform: translate(-20px, 40px) rotate(165deg) skew(10deg, 10deg) scale(0.3);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translate(-40px, 25px) rotate(120deg) skew(10deg, 10deg) scale(0.3);
+            transform: translate(-40px, 25px) rotate(120deg) skew(10deg, 10deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes water-point2-animation {
+  0%,
+  10%,
+  100% {
+    -webkit-transform: translate(-5px, 40px) rotate(270deg) skew(10deg, 10deg) scale(0.4);
+            transform: translate(-5px, 40px) rotate(270deg) skew(10deg, 10deg) scale(0.4);
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translate(20px, 20px) rotate(310deg) skew(10deg, 10deg) scale(0.4);
+            transform: translate(20px, 20px) rotate(310deg) skew(10deg, 10deg) scale(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes water-point2-animation {
+  0%,
+  10%,
+  100% {
+    -webkit-transform: translate(-5px, 40px) rotate(270deg) skew(10deg, 10deg) scale(0.4);
+            transform: translate(-5px, 40px) rotate(270deg) skew(10deg, 10deg) scale(0.4);
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translate(20px, 20px) rotate(310deg) skew(10deg, 10deg) scale(0.4);
+            transform: translate(20px, 20px) rotate(310deg) skew(10deg, 10deg) scale(0.4);
+    opacity: 0;
+  }
+}
+
+.animation-squire {
+  text-align: center;
+  margin-top: 50px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 700;
+          perspective: 700;
+}
+
+.animation-squire .up div {
+  margin-left: 10px;
+  display: inline-block;
+  background-color: #464646;
+  height: 10px;
+  width: 10px;
+  -webkit-animation-name: sk-bouncedelay;
+          animation-name: sk-bouncedelay;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animation-squire .up div:nth-child(1) {
+  -webkit-animation-delay: -0.32s;
+          animation-delay: -0.32s;
+}
+
+.animation-squire .up div:nth-child(2) {
+  -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+}
+
+.animation-squire .up div:nth-child(3) {
+  -webkit-animation-delay: -0.10667s;
+          animation-delay: -0.10667s;
+}
+
+.animation-squire .middle div {
+  margin-left: 10px;
+  display: inline-block;
+  background-color: #464646;
+  height: 10px;
+  width: 10px;
+  -webkit-animation-name: sk-bouncedelay;
+          animation-name: sk-bouncedelay;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animation-squire .middle div:nth-child(1) {
+  -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+}
+
+.animation-squire .middle div:nth-child(2) {
+  -webkit-animation-delay: -0.08s;
+          animation-delay: -0.08s;
+}
+
+.animation-squire .middle div:nth-child(3) {
+  -webkit-animation-delay: -0.05333s;
+          animation-delay: -0.05333s;
+}
+
+.animation-squire .end div {
+  margin-left: 10px;
+  display: inline-block;
+  background-color: #464646;
+  height: 10px;
+  width: 10px;
+  -webkit-animation-name: sk-bouncedelay;
+          animation-name: sk-bouncedelay;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animation-squire .end div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.animation-squire .end div:nth-child(2) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.animation-squire .end div:nth-child(3) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    background-color: #e9dfdf;
+  }
+  49% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    background-color: #464646;
+  }
+  50% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    background-color: #464646;
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    background-color: #e9dfdf;
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    background-color: #e9dfdf;
+  }
+  49% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    background-color: #464646;
+  }
+  50% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    background-color: #464646;
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    background-color: #e9dfdf;
+  }
+}
+
+.animation-circle {
+  margin-top: 50px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 600;
+          perspective: 600;
+  left: 47.5%;
+}
+
+.animation-circle div {
+  position: absolute;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: #c5c2c2;
+  border-radius: 50%;
+}
+
+.animation-circle div:nth-child(1) {
+  height: 80px;
+  width: 80px;
+  z-index: 10;
+  -webkit-animation-name: circle-animation1;
+          animation-name: circle-animation1;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animation-circle div:nth-child(2) {
+  height: 30px;
+  width: 30px;
+  z-index: 20;
+  top: 25px;
+  margin-left: 25px;
+  -webkit-animation-name: circle-animation2;
+          animation-name: circle-animation2;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes circle-animation1 {
+  0% {
+    -webkit-transform: scaleY(1) rotateY(0);
+            transform: scaleY(1) rotateY(0);
+  }
+  30% {
+    background-color: #747373;
+  }
+  100% {
+    -webkit-transform: scaleY(0) rotateY(360deg);
+            transform: scaleY(0) rotateY(360deg);
+  }
+}
+
+@keyframes circle-animation1 {
+  0% {
+    -webkit-transform: scaleY(1) rotateY(0);
+            transform: scaleY(1) rotateY(0);
+  }
+  30% {
+    background-color: #747373;
+  }
+  100% {
+    -webkit-transform: scaleY(0) rotateY(360deg);
+            transform: scaleY(0) rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes circle-animation2 {
+  30% {
+    -webkit-transform: scaleX(1) rotate(0);
+            transform: scaleX(1) rotate(0);
+  }
+  50% {
+    background-color: #747373;
+  }
+  60% {
+    -webkit-transform: scaleX(1.8) scaleY(0.5) rotate(0);
+            transform: scaleX(1.8) scaleY(0.5) rotate(0);
+  }
+  80% {
+    -webkit-transform: scaleX(0) rotate(120deg);
+            transform: scaleX(0) rotate(120deg);
+  }
+  100% {
+    -webkit-transform: scaleX(0) rotate(360deg);
+            transform: scaleX(0) rotate(360deg);
+  }
+}
+
+@keyframes circle-animation2 {
+  30% {
+    -webkit-transform: scaleX(1) rotate(0);
+            transform: scaleX(1) rotate(0);
+  }
+  50% {
+    background-color: #747373;
+  }
+  60% {
+    -webkit-transform: scaleX(1.8) scaleY(0.5) rotate(0);
+            transform: scaleX(1.8) scaleY(0.5) rotate(0);
+  }
+  80% {
+    -webkit-transform: scaleX(0) rotate(120deg);
+            transform: scaleX(0) rotate(120deg);
+  }
+  100% {
+    -webkit-transform: scaleX(0) rotate(360deg);
+            transform: scaleX(0) rotate(360deg);
+  }
+}
+
+.animation-bar {
+  text-align: center;
+  margin-top: 200px;
+  letter-spacing: 2px;
+}
+
+.animation-bar div {
+  display: inline-block;
+  border: solid #464646;
+  width: 7px;
+  height: 50px;
+  background-color: #464646;
+  -webkit-animation-name: bar-animation;
+          animation-name: bar-animation;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-time-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animation-bar div:nth-child(1) {
+  -webkit-animation-delay: -0.32s;
+          animation-delay: -0.32s;
+}
+
+.animation-bar div:nth-child(2) {
+  -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+}
+
+.animation-bar div:nth-child(3) {
+  -webkit-animation-delay: -0.10667s;
+          animation-delay: -0.10667s;
+}
+
+.animation-bar div:nth-child(4) {
+  -webkit-animation-delay: -0.08s;
+          animation-delay: -0.08s;
+}
+
+.animation-bar div:nth-child(5) {
+  -webkit-animation-delay: -0.064s;
+          animation-delay: -0.064s;
+}
+
+@-webkit-keyframes bar-animation {
+  0%,
+  100% {
+    -webkit-transform: scaleY(0.7);
+            transform: scaleY(0.7);
+  }
+  50% {
+    -webkit-transform: scaleY(1.5);
+            transform: scaleY(1.5);
+  }
+}
+
+@keyframes bar-animation {
+  0%,
+  100% {
+    -webkit-transform: scaleY(0.7);
+            transform: scaleY(0.7);
+  }
+  50% {
+    -webkit-transform: scaleY(1.5);
+            transform: scaleY(1.5);
+  }
+}
+/*# sourceMappingURL=upload.css.map */

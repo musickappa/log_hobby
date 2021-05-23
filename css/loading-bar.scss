@@ -1,0 +1,44 @@
+.pace {
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.pace .pace-progress {
+  transform: none !important;
+  text-align: center;
+}
+
+.pace .pace-progress::after {
+  content: attr(data-progress-text);
+  display: block;
+  font-weight: 100;
+  font-size: 2em;
+  font-family: "Helvetica Neue", "Yu Gothic", "Meiryo", sans-serif;
+  color: $cSubTitle;
+}
+
+.pace.pace-inactive {
+  display: none;
+}
+
+.pace-progress-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $cSubTitle;
+
+  margin: 0 auto;
+  @include animation(
+    $name: sk-rotateplane,
+    $duration: 1.2s,
+    $iteration-count: infinite,
+    $time-function: ease-in-out
+  );
+}

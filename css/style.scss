@@ -14,20 +14,120 @@ html {
   }
 }
 
-.container {
+.global_container {
   // background-color: darkslategray;
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   max-width: 100%;
-  & nav {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
+  // border: solid;
+  // background-color: aquamarine;
+  & .nav-container-content {
+    // display: flex;
+    // background-color: aquamarine;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    // border: solid;
+
+    & nav {
+      position: absolute;
+      display: inline-block;
+      height: 100%;
+      width: auto;
+      top: 0;
+      left: 0;
+      // background-color: aqua;
+      // border: solid;
+      text-align: start;
+      // border: solid;
+      & .option {
+        height: auto;
+        width: auto;
+
+        &__title {
+          position: relative;
+          height: auto;
+          width: auto;
+          font-size: 30px;
+          font-family: "Courier New", Courier, monospace;
+          margin-top: 90px;
+          margin-left: 60px;
+          font-weight: 100px;
+          & .icon {
+            display: inline-block;
+            // margin-right: -10px;
+          }
+          & p {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__image {
+      background-image: url("../images/pic/mokuji.JPG");
+      // background-color: aqua;
+      position: absolute;
+      right: 0;
+      height: auto;
+      width: 700px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      min-width: 4vh;
+    }
   }
-  &::-webkit-scrollbar {
-    display: none;
+  & .nav-container-profile {
+    // display: flex;
+    // background-color: aquamarine;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    & nav {
+      position: absolute;
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      top: 0;
+      right: 0;
+      // background-color: aqua;
+      text-align: start;
+      border: solid;
+      & .option {
+        height: 100px;
+        width: 100px;
+        &__title {
+          height: auto;
+          width: auto;
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__image {
+      background-image: url("../images/pic/mokuji.JPG");
+      position: absolute;
+      left: 0;
+      height: auto;
+      width: 700px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      min-width: 4vh;
+    }
   }
+}
+.container {
+  opacity: 0;
+  // width: 140px;
+  // transform: translate(650px);
 }
 
 .wrapper {
@@ -37,6 +137,7 @@ html {
 }
 
 .title {
+  // opacity: 0;
   position: relative;
   max-width: 100%;
   // border: solid rebeccapurple;
@@ -51,6 +152,7 @@ html {
   }
   &__image {
     background: url("../images/pic/title.jpg");
+    // opacity: 0;
     // background-size: cover;
     background-size: 100% 100%;
     background-position: top;
@@ -103,11 +205,6 @@ html {
     top: 0;
     height: 100%;
     width: 100%;
-    // margin: 50px;
-    // border: solid;
-    // text-align: center;
-    //     background-color: aquamarine;
-    // margin: 40px;
     z-index: 5;
     &__text {
       display: flex;
@@ -335,8 +432,7 @@ html {
         }
       }
       & .aqua__text {
-        // border: solid;
-        height: 200px;
+        height: 150px;
         width: auto;
       }
       & .kind {

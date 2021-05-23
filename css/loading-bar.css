@@ -1,0 +1,47 @@
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-clip: padding-box;
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.pace .pace-progress {
+  -webkit-transform: none !important;
+          transform: none !important;
+  text-align: center;
+}
+
+.pace .pace-progress:after {
+  content: attr(data-progress-text);
+  display: block;
+  font-weight: 100;
+  font-size: 2em;
+  letter-spacing: 10px;
+}
+
+.pace-done .pace-progress:after {
+  opacity: 0;
+}
+
+.pace.pace-inactive {
+  display: none;
+}
+/*# sourceMappingURL=loading-bar.css.map */
